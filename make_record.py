@@ -16,7 +16,7 @@ record_path = args.record_path
 if resize is not None:
 	width, height = [int(val) for val in resize.split('x')]
 
-with open(record_path, 'w') as record:
+with open(record_path, 'wb') as record:
 	for img_path in os.listdir(images_path):
 
 		img=cv2.imread(os.path.join(images_path, img_path))
